@@ -1,0 +1,138 @@
+.home {
+  display: grid;
+  row-gap: 2.8rem; 
+  padding-top: 4.5rem;
+}
+
+.home__header {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.home__form {
+  background-color: #FFF;
+  box-shadow: -12px 12px 0px #00CCFF;
+  border: 4px solid #00CCFF;
+  padding: 0.75rem 2rem;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  column-gap: 1.875rem;
+}
+
+.home__form-input {
+  border: none;
+  font-size: 1rem;
+}
+
+.home__form-input::placeholder {
+  color: #7E7E7E;
+}
+
+.home__form-input:focus {
+  outline: none;
+}
+
+.home__content-list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-items: center;
+  gap: 2rem 1.5rem;
+}
+
+.home__content-list li {
+  position: relative;
+  /* box-shadow: 10px 10px red; */
+}
+
+.home__content-list li::before {
+  content: "";
+  background-color: #00CCFF;
+  display: block;
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  left:-15px;
+  top: 65px;
+  z-index: -100;
+}
+
+.home__content-list-item {
+  overflow: hidden;
+  display: block;
+}
+
+.home__content-list-item:hover
+.home__content-list-image {
+  transform: scale(1.3);
+}
+
+.home__content-list-image {
+  background-color: #FFF;
+  border: 4px solid #00CCFF;
+  padding: .5rem;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  transition: all .2s ease;
+}
+
+.footer { 
+  padding: 3rem 0 1rem;
+}
+
+.footer__text,
+.footer__link{
+  font-family: "Poppins", sans-serif;
+  font-size: .820rem;
+  color: #9a9a9a;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: #00CCFF;
+}
+
+@media (max-width: 430px) {
+
+  .home__form {
+    justify-content: center;
+  }
+
+ .home__logo-link {
+    position: absolute;
+    top: 1rem; 
+  }
+
+  .home__content-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home__content-list li::before {
+    top: 38px;
+  }
+
+  .home__content-list-image {
+    width:150px;
+    height: 150px;
+  }
+
+  .footer__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 290px) {
+
+  .home {
+    justify-content: center;
+  }
+
+  .home__content-list {
+    grid-template-columns: 1fr;
+  }
+
+  
+}

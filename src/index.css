@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Poppins:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  height: 100vh;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
